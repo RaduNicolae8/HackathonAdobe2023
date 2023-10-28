@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 const Login = () => {
 
     return (
+        
         <div className="login">
             <div className="center">
 
@@ -16,7 +17,11 @@ const Login = () => {
                         <Input id="email" placeholder="Email" />
                         {/* <label htmlFor="password">Password</label> */}
                         <Input id="password" placeholder="Password" />
-                        <Button colorScheme='green' variant='solid'>Login</Button>
+                        <br />
+                        <Link>
+                            <Button colorScheme='green' variant='solid'>Login</Button>
+                        </Link>
+
                         <Link to="/register">
                             <Button colorScheme='green' variant='outline'>
                                 Register

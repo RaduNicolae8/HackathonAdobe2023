@@ -17,10 +17,8 @@ function App() {
     return (
       <div className="app">
 
-        <Outlet>
           <Login/>
-        </Outlet>
-
+        
       </div>
     )
   }
@@ -28,18 +26,16 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Login />,
-      children: [
-      {
-        path: "/login",
-        element: <Login/>
-      },
-      {
-        path: "/register",
-        element: <Register/>
-      },
-      ]
+      element: <Layout />
     },
+    {
+      path: "/login",
+      element: <Login />
+    },
+    {
+      path: "/register",
+      element: <Register />
+    }
   ]);
 
   return (
