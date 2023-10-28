@@ -27,6 +27,7 @@ public class TheDonateCompassApplication extends SpringBootServletInitializer {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**").allowedMethods("*").allowedOrigins("*");
 			}
+			//
 		};
 	}
 }
