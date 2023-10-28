@@ -24,6 +24,10 @@ public class PostService {
         return repository.findAll();
     }
 
+    public List<String> getAllLocations() {
+        return repository.findAllLocations();
+    }
+
     public Page<PostEntity> filterPosts(String location, String state, String productType, Pageable pageable) {
         return repository.findAllByFilter(location, state, productType, pageable);
     }

@@ -1,6 +1,7 @@
 package com.TheDonateCompass.TheDonateCompass.Entity;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "post_ong")
@@ -38,6 +39,14 @@ public class PostONGEntity {
 
     public void setProductType(String productType) {
         this.productType = productType;
+    }
+
+    public String getSeverity() {
+        return severity;
+    }
+
+    public void setSeverity(String severity) {
+        this.severity = severity;
     }
 
     public String getTitle() {

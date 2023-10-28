@@ -29,6 +29,12 @@ public class PostController {
     }
 
     @GetMapping("/location")
+    public ResponseEntity getAllLocations() {
+        List<String> locations = service.getAllLocations();
+        return new ResponseEntity<>(locations, HttpStatus.OK);
+    }
+
+    @GetMapping("/filter")
     public ResponseEntity getFilteredPosts(@RequestParam(value = "location", required = false) String location, @RequestParam(value = "state", required = false) String state, @RequestParam(value = "productType", required = false) String productType, Pageable pageable) {
         return new ResponseEntity<>(service.filterPosts(location, state, productType, pageable), HttpStatus.OK);
     }
@@ -41,7 +47,7 @@ public class PostController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity deletePostById(@PathVariable Long id) {
-
+    //
         return new ResponseEntity<>(service.deletePostById(id), HttpStatus.OK);
     }
 }

@@ -3,6 +3,7 @@ package com.TheDonateCompass.TheDonateCompass.Service;
 import com.TheDonateCompass.TheDonateCompass.Entity.PostONGEntity;
 import com.TheDonateCompass.TheDonateCompass.Repository.PostONGRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +21,14 @@ public class PostONGService {
         return repository.findAll();
     }
 
+    public List<String> getAllLocations() {
+        return repository.findAllLocations();
+    }
+
+    public Object filterONGPosts(String location, String severity, Pageable pageable) {
+        return repository.findAllByFilter(location, severity, pageable);
+    }
+
     public String updatePost(PostONGEntity postONGEntity, Long id) {
         PostONGEntity post = repository.findById(id).orElse(null);
 
@@ -32,6 +41,9 @@ public class PostONGService {
             }
             if (postONGEntity.getProductType() != null) {
                 post.setProductType(postONGEntity.getProductType());
+            }
+            if (postONGEntity.getSeverity() != null) {
+                post.setSeverity(postONGEntity.getSeverity());
             }
             if (postONGEntity.getTitle() != null) {
                 post.setTitle(postONGEntity.getTitle());
