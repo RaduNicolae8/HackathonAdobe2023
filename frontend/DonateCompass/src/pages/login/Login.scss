@@ -10,6 +10,10 @@
     align-items: center;
     justify-content: center;
 
+    .error{
+        color:red;
+    }
+
     .center {
         display: flex;
         flex-direction: row;

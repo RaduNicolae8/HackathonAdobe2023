@@ -9,6 +9,7 @@ const Login = () => {
 
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
+    const [error, setError] = React.useState(false);
     const navigate = useNavigate();
 
 
@@ -21,9 +22,11 @@ const Login = () => {
         newRequest.post('/api/users/login' , user).then((res)=>{
             console.log(res.data);
             sessionStorage.setItem("jwt", "Bearer " + res.data);
+            sessionStorage.setItem("email", email);
             navigate("/home");
         }).catch((err)=>{
             console.log(err);
+            setError(true);
         })
 
 
@@ -45,12 +48,13 @@ const Login = () => {
                         <Link>
                             <Button colorScheme='green' variant='solid'  onClick={()=>{submit()}}>Login</Button>
                         </Link>
-
                         <Link to="/register">
                             <Button colorScheme='green' variant='outline'>
                                 Register
                             </Button>
                         </Link>
+                        {error && <p className="error">Invalid Credentials</p>}
+
 
                     </div>
                 </div>
