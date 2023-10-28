@@ -1,6 +1,5 @@
 package com.TheDonateCompass.TheDonateCompass.Repository;
 
-import com.TheDonateCompass.TheDonateCompass.Entity.PostEntity;
 import com.TheDonateCompass.TheDonateCompass.Entity.PostONGEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
