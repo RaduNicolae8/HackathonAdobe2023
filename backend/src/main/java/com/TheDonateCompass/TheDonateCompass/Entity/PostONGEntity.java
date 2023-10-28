@@ -1,6 +1,7 @@
 package com.TheDonateCompass.TheDonateCompass.Entity;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "post_ong")
