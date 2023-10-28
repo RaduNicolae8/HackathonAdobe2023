@@ -8,6 +8,10 @@ import {
 } from "react-router-dom";
 import Register from './pages/register/Register';
 import { Outlet } from 'react-router-dom';
+import Home from './pages/home/Home';
+import Add from './pages/add/Add';
+import View from './pages/viewDonations/View';
+import Requests from './pages/requests/Requests';
 
 
 function App() {
@@ -35,7 +39,23 @@ function App() {
     {
       path: "/register",
       element: <Register />
-    }
+    },
+    {
+      path: "/home",
+      element: <Home />
+    },
+    {
+      path: "/add",
+      element: <Add />
+    },
+    {
+      path: "/view",
+      element: <View />
+    },
+    {
+      path: "/requests",
+      element: <Requests />
+    },
   ]);
 
   return (

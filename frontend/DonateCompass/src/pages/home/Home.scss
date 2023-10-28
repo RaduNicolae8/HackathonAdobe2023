@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    .section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 0 15rem;
+        width: 100vw;
+
+        .image{
+            flex:50%;
+            img{
+                max-width: 29vw;
+                height: auto;
+            }
+            
+        }
+        .text{
+            flex:50%;
+            font-style: italic;
+        }
+    }
+}
