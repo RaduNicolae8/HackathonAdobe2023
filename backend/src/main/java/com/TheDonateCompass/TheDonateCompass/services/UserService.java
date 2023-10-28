@@ -14,6 +14,8 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+import static com.TheDonateCompass.TheDonateCompass.security.WebSecurity.bCryptPasswordEncoder;
+
 @Service
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,7 +28,7 @@ public class UserService {
     public String registerUser(UserDto userDto) {
         try {
             userRepository.save(User.builder()
-                    .password(userDto.getPassword())
+                    .password(bCryptPasswordEncoder().encode(userDto.getPassword()))
                     .email(userDto.getEmail())
                     .firstName(userDto.getFirstName())
                     .lastName(userDto.getLastName())
@@ -56,8 +58,8 @@ public class UserService {
     }
     public String createUser(User user) {
         try {
-            User createdDonor = userRepository.save(user);
-            return "Donor successfully created. Donor Information: " + createdDonor.toString();
+            userRepository.save(user);
+            return "Donor successfully created.";
         } catch (Exception ex) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "An error occurred trying to create a new donor", ex);
         }

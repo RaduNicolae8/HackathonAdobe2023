@@ -19,16 +19,16 @@ public class UserDetailsServiceImpl implements UserDetailsService {
   }
 
   @Override
-  public UserDetails loadUserByUsername(String phoneNumber) throws UsernameNotFoundException {
+  public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
-    User user = userRepository.findByPhoneNumber(phoneNumber);
+    User user = userRepository.findByEmail(email);
 
     if (user == null) {
       throw new UsernameNotFoundException("Could not find donor");
     } else {
       Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-      authorities.add(new SimpleGrantedAuthority(user.getPhoneNumber()));
-      return new org.springframework.security.core.userdetails.User(user.getPhoneNumber(), user.getPassword(), authorities);
+      authorities.add(new SimpleGrantedAuthority(user.getEmail()));
+      return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), authorities);
     }
   }
 }
