@@ -1,10 +1,10 @@
 import React from 'react'
-import './Requests.scss'
+import './Donations.scss'
 import Navbar from '../../components/Navbar/Navbar'
 import DonationCard from '../../components/DonationCard/DonationCard'
 import { Input, Select } from '@chakra-ui/react'
 
-function Requests() {
+function Donations() {
 
   const item ={
     "image" : "http://res.cloudinary.com/di0ub0hhl/image/upload/v1698496362/DonateCompass/rfgtdne02o7kndg3gzwk.jpg",
@@ -19,7 +19,7 @@ function Requests() {
     <>
     <Navbar/>    
 
-    <div className="requestsContainer">
+    <div className="donationsContainer">
 
       <div className="header">
         <Input id="search" placeholder='Search'/>
@@ -62,4 +62,4 @@ function Requests() {
   )
 }
 
-export default Requests
+export default Donations

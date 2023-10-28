@@ -12,6 +12,8 @@ import Home from './pages/home/Home';
 import Add from './pages/add/Add';
 import View from './pages/viewDonations/View';
 import Requests from './pages/requests/Requests';
+import AddRequest from './pages/addRequest/AddRequest';
+import Donations from './pages/donations/Donations';
 
 
 function App() {
@@ -55,6 +57,14 @@ function App() {
     {
       path: "/requests",
       element: <Requests />
+    },
+    {
+      path: "/addRequest",
+      element: <AddRequest />
+    },
+    {
+      path: "/donations",
+      element: <Donations />
     },
   ]);
 

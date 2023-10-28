@@ -1,46 +1,25 @@
 import React from 'react'
-import './Add.scss'
+import './AddRequest.scss'
 import Navbar from '../../components/Navbar/Navbar'
 import { Select, Input, Textarea, Button } from "@chakra-ui/react"
 import { useState } from 'react';
 import axios from 'axios';
 
-function Add() {
-
-  const [image, setImage] = useState("");
+function AddRequest() {
 
   const submit = async (e) => {
-     const url = uploadFile(image);
-    //  console.log(url);
-    // console.log(image);
-  
+ 
   };
 
-  const uploadFile = async (file) => {
-    const data = new FormData();
-    data.append("file", file);
-    data.append("upload_preset", "DonateCompass");
-
-    try{
-      const res = await axios.post(
-        "https://api.cloudinary.com/v1_1/di0ub0hhl/image/upload",
-        data
-      );
-      console.log(res.data.url);
-      return res.data.url;
-    }catch(err){
-      console.log(err);
-    }
-  };
 
   return (
     <>
         <Navbar/>
-        <div className="container">
+        <div className="addContainer">
 
           <div className="innerContainer">
 
-            <h1 className="title">Add New Donation</h1>
+            <h1 className="title">Request A New Donation</h1>
 
             <Select id='productType' placeholder='Product Type' className='input'>
               <option value='option1'>Consumables</option>
@@ -59,7 +38,12 @@ function Add() {
               <option value='option2'>Used</option>
             </Select>
             <Input id='location' placeholder='location' className='input'/>
-            <Input id='image' type='file'  className='input' onChange={(e)=>{setImage(e.target.files[0])}}/>
+
+            <Select id='severity' placeholder='Severity' className='input'>
+              <option value='option1'>High Severity</option>
+              <option value='option2'>Medium Severity</option>
+              <option value='option3'>Low Severity</option>
+            </Select>
 
             <Button colorScheme='green' variant='solid' onClick={()=>{submit()}}>Add</Button>
 
@@ -70,4 +54,4 @@ function Add() {
   )
 }
 
-export default Add
+export default AddRequest
