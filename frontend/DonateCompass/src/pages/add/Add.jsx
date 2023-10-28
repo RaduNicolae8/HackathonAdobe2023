@@ -17,38 +17,36 @@ function Add() {
 
   function timeout(delay) {
     return new Promise( res => setTimeout(res, delay) );
-}
-
-const submit = async () => {
-  const imageUrl = await uploadFile(image);
-  const userId = await getAuthUser();
-  const postEntity = {
-    "productType": productType,
-    "title": title,
-    "description": description,
-    "state": state,
-    "location": location,
-    "imageUrl": imageUrl,
-    "userId": userId.id
-  };
-
-  console.log(postEntity);
-  console.log("test:" + userId);
-  console.log("testing");
-
-  try {
-    const response = await newRequest.post('/post/', postEntity, {
-      headers: {
-        'Authorization': sessionStorage.getItem("jwt")
-      }
-    });
-    // You can access the response data here if needed: response.data
-  } catch (error) {
-    // Handle errors here
   }
 
-  // Code after the asynchronous operations here
-};
+  const submit = async () => {
+    try {
+      const imageUrl = await uploadFile(image);
+      const userId = await getAuthUser();
+      const postEntity = {
+        "productType": productType,
+        "title": title,
+        "description": description,
+        "state": state,
+        "location": location,
+        "imageUrl": imageUrl,
+        "userId": userId.id
+      };
+
+      console.log(postEntity);
+      console.log("test:" + userId);
+      console.log("testing");
+
+      const response = await newRequest.post('/post/', postEntity, {
+        headers: {
+          'Authorization': sessionStorage.getItem("jwt")
+        }
+      });
+      // You can access the response data here if needed: response.data
+    } catch (error) {
+      // Handle errors here
+    }
+  };
 
   const getAuthUser = async  (e) => {
   
