@@ -109,5 +109,14 @@ public class UserService {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "An error occurred while deleting the donor", ex);
         }
     }
+
+    public ResponseEntity<User> findByEmail(String email) {
+        try {
+            User user = userRepository.findByEmail(email);
+            return new ResponseEntity<>(user, HttpStatus.OK);
+        } catch (Exception ex) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "An error occurred while fetching the donor's data", ex);
+        }
+    }
 }
 

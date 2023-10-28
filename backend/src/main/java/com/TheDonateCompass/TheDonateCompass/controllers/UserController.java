@@ -42,4 +42,10 @@ public class UserController {
         return userService.deleteUser(id);
     }
 
+    @GetMapping("/findByEmail/{email}")
+    public ResponseEntity<User> findByEmail(@PathVariable String email) {
+        System.out.println("email: " + email);
+        return userService.findByEmail(email);
+    }
+
 }
