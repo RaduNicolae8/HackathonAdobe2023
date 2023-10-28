@@ -6,13 +6,22 @@ import { Input, Select } from '@chakra-ui/react'
 
 function Requests() {
 
-  const item ={
-    "image" : "http://res.cloudinary.com/di0ub0hhl/image/upload/v1698496362/DonateCompass/rfgtdne02o7kndg3gzwk.jpg",
+  const item1 ={
+    "image" : "https://i.imgur.com/G3YDkr3.jpeg",
     "title" : "Donating my old baby clothes",
-    "firstName" : "John",
-    "lastName" : "Doe",
-    "description" : "These are some Baby clothes for 0-3 months lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    "firstName" : "Edi",
+    "lastName" : "Radu",
+    "description" : "These are some Baby clothes for 0-3 months",
     "phone" : "0748406221"
+  }
+
+  const item2 ={
+    "image" : "https://i.imgur.com/dtqaTRD.jpeg",
+    "title" : "Donating old sofa",
+    "firstName" : "Vlad",
+    "lastName" : "Oancea",
+    "description" : "In very good shape",
+    "phone" : "0798783511"
   }
 
   return (
@@ -44,16 +53,16 @@ function Requests() {
       </div>
 
       <div className="cards">
-        <DonationCard item={item}/>
-        <DonationCard item={item}/>
-        <DonationCard item={item}/>
-        <DonationCard item={item}/>
-        <DonationCard item={item}/>
-        <DonationCard item={item}/>
-        <DonationCard item={item}/>
-        <DonationCard item={item}/>
-        <DonationCard item={item}/>
-        <DonationCard item={item}/>
+        <DonationCard item={item1}/>
+        <DonationCard item={item2}/>
+        {/*<DonationCard item={item}/>*/}
+        {/*<DonationCard item={item}/>*/}
+        {/*<DonationCard item={item}/>*/}
+        {/*<DonationCard item={item}/>*/}
+        {/*<DonationCard item={item}/>*/}
+        {/*<DonationCard item={item}/>*/}
+        {/*<DonationCard item={item}/>*/}
+        {/*<DonationCard item={item}/>*/}
       </div>
 
     </div>
