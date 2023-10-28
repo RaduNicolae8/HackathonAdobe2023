@@ -40,6 +40,14 @@ public class PostONGEntity {
         this.productType = productType;
     }
 
+    public String getSeverity() {
+        return severity;
+    }
+
+    public void setSeverity(String severity) {
+        this.severity = severity;
+    }
+
     public String getTitle() {
         return title;
     }
