@@ -57,4 +57,21 @@ public class User implements Serializable {
 
     @Column(name = "Ong")
     private Boolean isOng;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id + "\n" +
+                "firstName='" + firstName + '\'' + "\n" +
+                "lastName='" + lastName + '\'' + "\n" +
+                "email='" + email + '\'' + "\n" +
+                "phoneNumber='" + phoneNumber + '\'' + "\n" +
+                "city='" + city + '\'' + "\n" +
+                "password='" + password + '\'' + "\n" +
+                "name='" + name + '\'' + "\n" +
+                "activity='" + activity + '\'' + "\n" +
+                "address='" + address + '\'' + "\n" +
+                "isOng=" + isOng + "\n" +
+                '}';
+    }
 }
