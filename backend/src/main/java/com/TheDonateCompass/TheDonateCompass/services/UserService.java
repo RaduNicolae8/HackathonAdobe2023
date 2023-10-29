@@ -1,7 +1,7 @@
 package com.TheDonateCompass.TheDonateCompass.services;
 
 import com.TheDonateCompass.TheDonateCompass.dto.UserDto;
-import com.TheDonateCompass.TheDonateCompass.modells.User;
+import com.TheDonateCompass.TheDonateCompass.entities.User;
 import com.TheDonateCompass.TheDonateCompass.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

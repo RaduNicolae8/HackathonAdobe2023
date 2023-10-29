@@ -1,6 +1,6 @@
 package com.TheDonateCompass.TheDonateCompass.repositories;
 
-import com.TheDonateCompass.TheDonateCompass.modells.User;
+import com.TheDonateCompass.TheDonateCompass.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

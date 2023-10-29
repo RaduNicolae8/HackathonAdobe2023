@@ -3,7 +3,7 @@ package com.TheDonateCompass.TheDonateCompass.security;
 import static com.TheDonateCompass.TheDonateCompass.constants.AuthConstants.EXPIRATION_TIME;
 import static com.TheDonateCompass.TheDonateCompass.constants.AuthConstants.SECRET;
 
-import com.TheDonateCompass.TheDonateCompass.modells.User;
+import com.TheDonateCompass.TheDonateCompass.entities.User;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;

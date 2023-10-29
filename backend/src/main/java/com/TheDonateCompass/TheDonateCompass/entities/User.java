@@ -1,4 +1,4 @@
-package com.TheDonateCompass.TheDonateCompass.modells;
+package com.TheDonateCompass.TheDonateCompass.entities;
 
 import java.io.Serializable;
 import javax.persistence.Column;

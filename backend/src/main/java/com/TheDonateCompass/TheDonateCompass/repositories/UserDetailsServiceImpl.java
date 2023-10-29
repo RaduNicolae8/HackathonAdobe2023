@@ -1,6 +1,6 @@
 package com.TheDonateCompass.TheDonateCompass.repositories;
 
-import com.TheDonateCompass.TheDonateCompass.modells.User;
+import com.TheDonateCompass.TheDonateCompass.entities.User;
 import java.util.ArrayList;
 import java.util.Collection;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

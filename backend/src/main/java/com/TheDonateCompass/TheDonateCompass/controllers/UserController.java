@@ -1,7 +1,7 @@
 package com.TheDonateCompass.TheDonateCompass.controllers;
 
 import com.TheDonateCompass.TheDonateCompass.dto.UserDto;
-import com.TheDonateCompass.TheDonateCompass.modells.User;
+import com.TheDonateCompass.TheDonateCompass.entities.User;
 import com.TheDonateCompass.TheDonateCompass.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

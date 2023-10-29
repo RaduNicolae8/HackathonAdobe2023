@@ -1,6 +1,6 @@
-package com.TheDonateCompass.TheDonateCompass.Repository;
+package com.TheDonateCompass.TheDonateCompass.repositories;
 
-import com.TheDonateCompass.TheDonateCompass.Entity.PostEntity;
+import com.TheDonateCompass.TheDonateCompass.entities.PostEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
